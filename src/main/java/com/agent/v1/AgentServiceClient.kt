@@ -459,30 +459,6 @@ public class AgentServiceClient(
   )
 
 
-  override suspend fun listWorksheets(request: ListWorksheetsRequest, headers: Headers): ResponseMessage<ListWorksheetsResponse> = client.unary(
-    request,
-    headers,
-    MethodSpec(
-    "agent.v1.AgentService/ListWorksheets",
-      com.agent.v1.ListWorksheetsRequest::class,
-      com.agent.v1.ListWorksheetsResponse::class,
-      StreamType.UNARY,
-    ),
-  )
-
-
-  override suspend fun decideWorksheet(request: DecideWorksheetRequest, headers: Headers): ResponseMessage<DecideWorksheetResponse> = client.unary(
-    request,
-    headers,
-    MethodSpec(
-    "agent.v1.AgentService/DecideWorksheet",
-      com.agent.v1.DecideWorksheetRequest::class,
-      com.agent.v1.DecideWorksheetResponse::class,
-      StreamType.UNARY,
-    ),
-  )
-
-
   override suspend fun getAgentConfig(request: GetAgentConfigRequest, headers: Headers): ResponseMessage<GetAgentConfigResponse> = client.unary(
     request,
     headers,
